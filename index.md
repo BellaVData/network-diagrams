@@ -17,9 +17,7 @@
 
 ## Процесс обмена пакетами между клиентом, ОС и сервером - UML Sequence Diagram.
 
-<a href="tcp_tls_sequence.png" target="_blank">
-  <img src="tcp_tls_sequence.svg" alt="TCP/TLS Handshake" style="display: block; width: 100%; height: auto; margin: 0 auto;">
-</a>
+<img src="tcp_tls_sequence.png" style="width: 100%; max-width: 900px; height: auto;" alt="Sequence Diagram">
 
 ## Процесс получения IP-адреса через систему доменных имен, смоделированный в нотации BPMN.
 
