@@ -20,3 +20,10 @@
 1. **DNS**: Преобразование URL в IP.
 2. **TCP/TLS**: Установка защищенного соединения.
 3. **HTTP**: Передача полезной нагрузки (JSON).
+
+## 1. DNS: Преобразование URL в IP
+Процесс получения IP-адреса через систему доменных имен, смоделированный в нотации BPMN.
+
+<a href="dns_process.svg" target="_blank">
+  <img src="dns_process.svg" alt="Процесс DNS (BPMN)" style="width: 100%; min-width: 1000px;">
+</a>
