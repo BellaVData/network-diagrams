@@ -15,15 +15,14 @@
   <img src="decomposition.svg" alt="Открыть в полном размере" style="width: 100%; min-width: 1000px;">
 </a>
 
+## Процесс обмена пакетами между клиентом, ОС и сервером - UML Sequence Diagram.
+
+<a href="tcp_tls_sequence.svg" target="_blank">
+  <img src="tcp_tls_sequence.svg" alt="TCP/TLS Handshake" style="display: block; width: 100%; height: auto; margin: 0 auto;">
+</a>
 
 ## Процесс получения IP-адреса через систему доменных имен, смоделированный в нотации BPMN.
 
 <a href="dns_process.svg" target="_blank">
   <img src="dns_process.svg" alt="Процесс DNS (BPMN)" style="width: 100%; min-width: 1000px;">
-</a>
-
-## Процесс обмена пакетами между клиентом, ОС и сервером - UML Sequence Diagram.
-
-<a href="tcp_tls_sequence.svg" target="_blank">
-  <img src="tcp_tls_sequence.svg" alt="TCP/TLS Handshake" style="display: block; width: 100%; height: auto; margin: 0 auto;">
 </a>
