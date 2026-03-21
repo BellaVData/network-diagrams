@@ -28,31 +28,33 @@
   <img src="dns_process.svg" alt="Процесс DNS (BPMN)" style="width: 100%; min-width: 1000px;">
 </a>
 
+```mermaid
 sequenceDiagram
     autonumber
     participant C as Браузер (Клиент)
     participant S as Сервер (Система заказов)
-
+    
     Note over C, S: 1. Установка TCP соединения (3-way handshake)
-    C->>S: SYN (Синхронизация: хочу подключиться)
-    S-->>C: SYN-ACK (Подтверждаю, готов)
-    C->>S: ACK (Соединение установлено)
-
-    Note over C, S: 2. Установка TLS соединения (Handshake)
-    C->>S: ClientHello (Поддерживаемые шифры, версия TLS)
-    S-->>C: ServerHello (Выбранный шифр)
-    S-->>C: Certificate (Сертификат с открытым ключом сервера)
-    S-->>C: ServerHelloDone (Передача данных завершена)
-
-    Note over C: ОС/Браузер проверяет<br/>подлинность сертификата
-
-    C->>S: ClientKeyExchange (Передача сессионного ключа)
-    C->>S: ChangeCipherSpec (Переходим на шифрование)
-    C->>S: Finished (Клиент готов)
-
-    S-->>C: ChangeCipherSpec (Подтверждаю шифрование)
-    S-->>C: Finished (Сервер готов)
-
-    Note over C, S: 3. Защищенный обмен данными
-    C->>S: Зашифрованный HTTP-запрос (JSON)
-    S-->>C: Зашифрованный HTTP-ответ (JSON)
+    C->>S: SYN
+    S-->>C: SYN-ACK
+    C->>S: ACK
+    
+    Note over C, S: 2. Установка TLS соединения
+    C->>S: ClientHello
+    S-->>C: ServerHello
+    S-->>C: Certificate
+    S-->>C: ServerHelloDone
+    
+    Note over C: Проверка сертификата
+    
+    C->>S: ClientKeyExchange
+    C->>S: ChangeCipherSpec
+    C->>S: Finished
+    
+    S-->>C: ChangeCipherSpec
+    S-->>C: Finished
+    
+    Note over C, S: 3. Зашифрованный обмен
+    C->>S: HTTP Request (JSON)
+    S-->>C: HTTP Response (JSON)
+```
