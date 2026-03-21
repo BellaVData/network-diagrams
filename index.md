@@ -25,5 +25,5 @@
 ## Процесс обмена пакетами между клиентом, ОС и сервером - UML Sequence Diagram.
 
 <a href="tcp_tls_sequence.svg" target="_blank">
-  <img src="tcp_tls_sequence.svg" alt="TCP/TLS Handshake" style="width: 100%;">
+  <img src="tcp_tls_sequence.svg" alt="TCP/TLS Handshake" style="display: block; width: 100%; height: auto; margin: 0 auto;">
 </a>
