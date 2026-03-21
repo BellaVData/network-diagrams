@@ -31,30 +31,25 @@
 ```mermaid
 sequenceDiagram
     autonumber
-    participant C as Браузер (Клиент)
-    participant S as Сервер (Система заказов)
-    
-    Note over C, S: 1. Установка TCP соединения (3-way handshake)
+    participant C as Браузер
+    participant S as Сервер
+
+    Note over C, S: 1. TCP handshake
     C->>S: SYN
     S-->>C: SYN-ACK
     C->>S: ACK
-    
-    Note over C, S: 2. Установка TLS соединения
-    C->>S: ClientHello
-    S-->>C: ServerHello
+
+    Note over C, S: 2. TLS 1.3 handshake
+    C->>S: ClientHello (SNI, key share, cipher suites)
+    S-->>C: ServerHello (key share)
+    S-->>C: EncryptedExtensions
     S-->>C: Certificate
-    S-->>C: ServerHelloDone
-    
-    Note over C: Проверка сертификата
-    
-    C->>S: ClientKeyExchange
-    C->>S: ChangeCipherSpec
-    C->>S: Finished
-    
-    S-->>C: ChangeCipherSpec
+    S-->>C: CertificateVerify
     S-->>C: Finished
-    
-    Note over C, S: 3. Зашифрованный обмен
-    C->>S: HTTP Request (JSON)
-    S-->>C: HTTP Response (JSON)
+
+    C->>S: Finished
+
+    Note over C, S: 3. Secure connection established
+    C->>S: HTTPS Request (encrypted)
+    S-->>C: HTTPS Response (encrypted)
 ```
