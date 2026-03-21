@@ -23,8 +23,6 @@
 
 ## Процесс получения IP-адреса через систему доменных имен, смоделированный в нотации BPMN.
 
-<div style="width: 100%; overflow: hidden; text-align: center; padding: 20px 0;">
-  <a href="tcp_tls_sequence.svg" target="_blank">
-    <img src="tcp_tls_sequence.svg" alt="TCP/TLS Handshake" style="width: auto; max-width: 100%; height: auto; display: block; margin: 0 auto;">
-  </a>
-</div>
+<a href="dns_process.svg" target="_blank">
+  <img src="dns_process.svg" alt="Процесс DNS (BPMN)" style="width: 100%; min-width: 1000px;">
+</a>
